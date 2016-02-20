@@ -34,7 +34,21 @@ $('#send').click(function( event ) {
 var author =$('#answerAuthor').val();
 var message = $('#answerText').val();
 var fromMail =$('#answerEmail').val();
-	
+if (author.length == 0)
+{
+ alert("Введите имя");
+return;
+}
+if (fromMail.length == 0)
+{
+ alert("Введите адрес почты");
+return;
+}
+if (message.length == 0)
+{
+ alert("Введите сообщение");
+return;
+}
 	$.ajax({
 		  type: 'POST',
 		  url: 'https://mandrillapp.com/api/1.0/messages/send.json',

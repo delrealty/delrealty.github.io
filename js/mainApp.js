@@ -28,14 +28,13 @@
 $(function(){
 main();
 });
-var send = function(answerForm)
-{
+$('#send').click(function( event ) {
+  event.preventDefault();
 
-//if (answerForm.valid)
-	{
-	var message = $('#answerText').val();
-	var fromMail =$('#answerEmail').val();
-	var author =$('#answerAuthor').val();
+var author =$('#answerAuthor').val();
+var message = $('#answerText').val();
+var fromMail =$('#answerEmail').val();
+	
 	$.ajax({
 		  type: 'POST',
 		  url: 'https://mandrillapp.com/api/1.0/messages/send.json',
@@ -45,7 +44,7 @@ var send = function(answerForm)
 		      'from_email': 'support@delrealty.ru',
 		      'to': [
 		          {
-		            'email': 'astaffer@mail.ru',
+		            'email': 'astaffer@gmail.com',
 		            'name': 'Pablo',
 		            'type': 'to'
 		          }
@@ -59,8 +58,12 @@ var send = function(answerForm)
 		    }
 		  }
 		 }).done(function(response) {
-		   console.log(response); // if you're into that sorta thing
-		 });
-return false;
-	}
-}
+				console.log(response);
+		 }).success(function(data, status, headers, config) {
+				// this callback will be called asynchronously
+				// when the response is available
+				console.log(data);
+				// действия по сохранению
+                alert(author + ", Ваше сообщение отправлено");
+		});
+});

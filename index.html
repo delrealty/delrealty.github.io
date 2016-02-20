@@ -41,59 +41,61 @@
 	</div>
 	
 <div class="main">
-<div class="container">
-<div class="col-md-8">
-		<div id="myCarousel" class="carousel slide" data-ride="carousel">
-		  <!-- Indicators -->
-		  <ol class="carousel-indicators">
-		    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-		    <li data-target="#myCarousel" data-slide-to="1"></li>
-		    <li data-target="#myCarousel" data-slide-to="2"></li>
-			<li data-target="#myCarousel" data-slide-to="3"></li>
-		  </ol>
-		
-		  <!-- Wrapper for slides -->
-		  <div class="carousel-inner" role="listbox">
-		     <div class="item active">
-		      <IMG    src="img\realestate1.jpg" alt = "Real Estate"></IMG>
-		    </div>
-		    <div class="item" >
-		       <IMG   src="img\realestate2.jpg" alt = "Real Estate"></IMG>
-		    </div>
-		    <div class="item" >
-		       <IMG   src="img\realestate3.jpg" alt = "Real Estate"></IMG>
-		    </div>
-		<div class="item" >
-		       <IMG   src="img\realestate4.jpg" alt = "Real Estate"></IMG>
-		    </div>
-		   
-		  </div>
-		  <!-- Left and right controls -->
-		  <a class="left carousel-control" href="" data-target="#myCarousel"  role="button" data-slide="prev">
-		    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		    <span class="sr-only">Previous</span>
-		  </a>
-		  <a class="right carousel-control" href="" data-target="#myCarousel"  role="button" data-slide="next">
-		    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		    <span class="sr-only">Next</span>
-		  </a>
-		</div>
-
-	 
-	  </div>
-</div>
-<h4>Написать нам</h4>
-		<form name="answerForm">
-		  <fieldset>
+<div class="row">
+<div class="col-md-6">
+		<h4>Написать нам</h4>
+			<form name="answerForm">
+		  	<fieldset>
 			  <p><label for="answerAuthor">Как к Вам обращаться: </label></p>
 			  <input id="answerAuthor" ng-model="answer.author" required placeholder="например, Иванов Иван Ивавнович" />
 			  <p><label for="answerEmail">Email для связи: </label></p>
 			  <p>	<input id="answerEmail" ng-model="answer.email" type="email" required placeholder="например, ivanov@yandex.ru" /></p>
 			  <p><label for="answerText">Ваше сообщение: </label></p>
 					  <p><textarea required rows="5" id="answerText" ng-model="answer.text" required placeholder="Здравствуйте, "></textarea></p>
-		  </fieldset>
-		  <button type="submit"  onclick="send(answerForm)">Отправить</button>
-		</form>
+		  	</fieldset>
+		  	<button id="send" >Отправить</button>
+			</form>
+	</div>
+	<div class="col-md-6">
+			<div id="myCarousel" class="carousel slide" data-ride="carousel">
+			  <!-- Indicators -->
+			  <ol class="carousel-indicators">
+			    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+			    <li data-target="#myCarousel" data-slide-to="1"></li>
+			    <li data-target="#myCarousel" data-slide-to="2"></li>
+				<li data-target="#myCarousel" data-slide-to="3"></li>
+			  </ol>
+			
+			  <!-- Wrapper for slides -->
+			  <div class="carousel-inner" role="listbox">
+			     <div class="item active">
+			      <IMG    src="img\realestate1.jpg" alt = "Real Estate"></IMG>
+			    </div>
+			    <div class="item" >
+			       <IMG   src="img\realestate2.jpg" alt = "Real Estate"></IMG>
+			    </div>
+			    <div class="item" >
+			       <IMG   src="img\realestate3.jpg" alt = "Real Estate"></IMG>
+			    </div>
+			<div class="item" >
+			       <IMG   src="img\realestate4.jpg" alt = "Real Estate"></IMG>
+			    </div>
+			   
+			  </div>
+			  <!-- Left and right controls -->
+			  <a class="left carousel-control" href="" data-target="#myCarousel"  role="button" data-slide="prev">
+			    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			    <span class="sr-only">Previous</span>
+			  </a>
+			  <a class="right carousel-control" href="" data-target="#myCarousel"  role="button" data-slide="next">
+			    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			    <span class="sr-only">Next</span>
+			  </a>
+			</div>
+	
+		 
+		  </div>
+	
 </div>
 <div></div>
 
@@ -105,7 +107,7 @@
       
     </footer>
     <!-- Modules -->
-    <script src="js/app.js"></script>
+ 
 	
    
     <!-- jQuery -->

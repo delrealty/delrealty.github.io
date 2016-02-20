@@ -60,8 +60,11 @@
 		    <div class="item" >
 		       <IMG   src="img\realestate2.jpg" alt = "Real Estate"></IMG>
 		    </div>
-			<div class="item" >
+		    <div class="item" >
 		       <IMG   src="img\realestate3.jpg" alt = "Real Estate"></IMG>
+		    </div>
+		<div class="item" >
+		       <IMG   src="img\realestate4.jpg" alt = "Real Estate"></IMG>
 		    </div>
 		   
 		  </div>
@@ -79,7 +82,18 @@
 	 
 	  </div>
 </div>
-
+<h4>Написать нам</h4>
+		<form name="answerForm">
+		  <fieldset>
+			  <p><label for="answerAuthor">Как к Вам обращаться: </label></p>
+			  <input id="answerAuthor" ng-model="answer.author" required placeholder="например, Иванов Иван Ивавнович" />
+			  <p><label for="answerEmail">Email для связи: </label></p>
+			  <p>	<input id="answerEmail" ng-model="answer.email" type="email" required placeholder="например, ivanov@yandex.ru" /></p>
+			  <p><label for="answerText">Ваше сообщение: </label></p>
+					  <p><textarea required rows="5" id="answerText" ng-model="answer.text" required placeholder="Здравствуйте, "></textarea></p>
+		  </fieldset>
+		  <button type="submit"  onclick="send(answerForm)">Отправить</button>
+		</form>
 </div>
 <div></div>
 

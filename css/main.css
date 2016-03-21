@@ -42,10 +42,12 @@ height:300px;
   height: 120px;
   width: 120px;
 }
-#logo {
-  margin: 0 20px 0 0;
-  height: 160px;
-  width: 160px;
+img.mainlogo
+{
+   
+  width: 800px;
+  display: block;
+	margin: 0 auto;
 }
 .header a {
   color: #000;

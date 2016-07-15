@@ -1,4 +1,4 @@
-function updateScrollSpy() {
+п»їfunction updateScrollSpy() {
     jQuery('[data-spy="scroll"]').each(function () {
       var $spy = jQuery(this).scrollspy('refresh')
     });
@@ -12,7 +12,7 @@ $(document).ready(function() {
 	 	    }, 500);
 	e.preventDefault();
 	 	});
-	 setTimeout(updateScrollSpy, 1000);
+	 setTimeout(updateScrollSpy, 500);
 	$('#sendMessage').click(function(e){
 		e.preventDefault();
 		var $message = $('#form_message').val();
@@ -30,14 +30,12 @@ $(document).ready(function() {
 		    dataType: "json"
 			})
 			.done(function() {
-			 alert("Ваше сообщение отправлено");
+			 alert("Р’Р°С€Рµ СЃРѕРѕР±С‰РµРЅРёРµ РѕС‚РїСЂР°РІР»РµРЅРѕ");
 			})
 		 	.fail(function() {
-			 alert("Сообщение отправить не удалось");
+			 alert("РЎРѕРѕР±С‰РµРЅРёРµ РѕС‚РїСЂР°РІРёС‚СЊ РЅРµ СѓРґР°Р»РѕСЃСЊ");
 			});
 	});
-});
-	
 });
 
 

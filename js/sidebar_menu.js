@@ -13,7 +13,30 @@ $(document).ready(function() {
 	e.preventDefault();
 	 	});
 	 setTimeout(updateScrollSpy, 1000);
-	
+	$('#sendMessage').click(function(e){
+		e.preventDefault();
+		var $message = $('#form_message').val();
+		var $phone = $('#form_phone').val();
+		var $email = $('#form_email').val();
+		var $name = $('#form_name').val();
+			$.ajax({
+		    url: "https://formspree.io/info@delrealty.ru", 
+		    method: "POST",
+		    data: {	name:$name,
+				phone:$phone,
+				mymail:$email,
+				message: $message,
+				},
+		    dataType: "json"
+			})
+			.done(function() {
+			 alert("Ваше сообщение отправлено");
+			})
+		 	.fail(function() {
+			 alert("Сообщение отправить не удалось");
+			});
+	});
+});
 	
 });
 

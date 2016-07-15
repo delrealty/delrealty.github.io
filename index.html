@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <meta name="author" content="">
     <title>Деловая недвижимость</title>
     <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -441,33 +442,32 @@
 		            </div>
 		            <div class="row">
 		                <div class="col-lg-12">
-		                    <form name="sentMessage" id="contactForm" novalidate action="https://formspree.io/info@delrealty.ru" method="POST">
+ 		                    <form name="sentMessage" id="contactForm" novalidate>
 		                        <div class="row">
 		                            <div class="col-md-6">
 		                                <div class="form-group">
-		                                    <input type="text" class="form-control" placeholder="Ваше имя *" id="form_name" required data-validation-required-message="Пожалуйста введите имя." name="Имя">
+		                                    <input type="text" class="form-control" placeholder="Ваше имя *" id="form_name" required data-validation-required-message="Пожалуйста введите имя." >
 		                                    <p class="help-block text-danger"></p>
 		                                </div>
 		                                <div class="form-group">
-		                                    <input type="email" class="form-control" placeholder="Ваш email *" id="form_email" required data-validation-required-message="Пожалуйста введите адрес." name="Адрес">
+		                                    <input type="email" class="form-control" placeholder="Ваш email *" id="form_email" required data-validation-required-message="Пожалуйста введите адрес." >
 		                                    <p class="help-block text-danger"></p>
 		                                </div>
 		                                <div class="form-group">
-		                                    <input type="tel" class="form-control" placeholder="Ваш телефон *" id="form_phone" required data-validation-required-message="Пожалуйста введите ваш номер телефона." name ="Телефон">
+		                                    <input type="tel" class="form-control" placeholder="Ваш телефон *" id="form_phone" required data-validation-required-message="Пожалуйста введите ваш номер телефона."  >
 		                                    <p class="help-block text-danger"></p>
 		                                </div>
 		                            </div>
 		                            <div class="col-md-6">
 		                                <div class="form-group">
-		                                    <textarea class="form-control" placeholder="Ваше сообщение *" id="form_message" required data-validation-required-message="Пожалуйста введите сообщение." name="Сообщение"></textarea>
+		                                    <textarea class="form-control" placeholder="Ваше сообщение *" id="form_message" required data-validation-required-message="Пожалуйста введите сообщение."  ></textarea>
 		                                    <p class="help-block text-danger"></p>
 		                                </div>
 		                            </div>
 		                            <div class="clearfix"></div>
 		                            <div class="col-lg-12 text-center">
 		                                <div id="success"></div>
-						<!--<input type="submit" value="Отправить сообщение">-->
-		                                 <button  type="submit" id = "sendMessage" class="btn btn-xl">Отправить сообщение</button>
+		                                 <button    id = "sendMessage" class="btn btn-xl">Отправить сообщение</button>
 		                            </div>
 		                        </div>
 		                    </form>

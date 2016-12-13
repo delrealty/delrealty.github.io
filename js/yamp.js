@@ -122,20 +122,16 @@ function init () {
 
         objectManager.clusters.options.set('preset', 'islands#greenClusterIcons');
         myMap.geoObjects.add(objectManager);
-
-        $.ajax({
-            url: "js/data.json"
-        }).done(function(data) {
-            objectManager.add(data);
-            var singleCounter = 0,
-            clusterCounter = 0;
-            objectManager.objects.each(function (object) {
+ $.ajax({
+            url: "http://realty.000webhostapp.com/php/getmap.php",
+            //async:false,
+            dataType: 'jsonp',
+            success:function(json){
+         // do stuff with json (in this case an array)
+                console.log("Success");
+               objectManager.add(json);
+               objectManager.objects.each(function (object) {
                 var objectState = objectManager.getObjectState(object.id);
-               /* if (objectState.isClustered) {
-                    clusterCounter++;
-                } else {
-                    if (objectState.isShown) {*/
-                        singleCounter++;
                         var preset ='islands#blueDotIcon';
                         switch(object.properties.type)
                         {
@@ -155,11 +151,12 @@ function init () {
                         
                         {
                             object.options.preset=preset;
-                        }
-                        
-        //}
-    //}
-});
-        });
+                        }});
+             },
+             error:function(){
+                 console.log("Error");
+             }      
+        }); 
+       
 
     }
